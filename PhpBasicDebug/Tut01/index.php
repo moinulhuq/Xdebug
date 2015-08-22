@@ -39,7 +39,7 @@ class Myclass{
 }
 $ObjMyclass = new Myclass();
 $ObjMyclass->$staticX;  //Notice: Undefined variable: staticX in C:\xampp\htdocs\prac\index.php on line 186
-				    //Fatal error: Cannot access empty property in C:\xampp\htdocs\prac\index.php on line 186
+			//Fatal error: Cannot access empty property in C:\xampp\htdocs\prac\index.php on line 186
 
 //E_DEPRECATED - Function split() is deprecated
 var_dump(split(',', 'one,two,three')); // Deprecated: Function split() is deprecated
