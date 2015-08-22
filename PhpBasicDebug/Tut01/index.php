@@ -54,4 +54,15 @@ $ObjMyclass->$staticX;  //Notice: Undefined variable: staticX in C:\xampp\htdocs
 //E_DEPRECATED - Function split() is deprecated
 var_dump(split(',', 'one,two,three')); // Deprecated: Function split() is deprecated
 
+/*
+|--------------------------------------------------------------------------
+| Important Notice
+|--------------------------------------------------------------------------
+|
+| If you set error_reporting(E_ALL) and ini_set('display_errors', '0') you can still get all errors reported 
+| in the log file but not displayed. With error_reporting(0) you don't get any errors displayed or in the log 
+| and it doesn't matter the values of display_errors.
+|
+*/
+
 ?>
