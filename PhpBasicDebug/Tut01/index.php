@@ -17,6 +17,16 @@
 | 32767  | E_ALL        | All errors, warnings and notices, except E_STRICT                                        |
 +--------+--------------+------------------------------------------------------------------------------------------+
 */
+/*
+|--------------------------------------------------------------------------
+| There are two configuration options for error reporting. 
+|--------------------------------------------------------------------------
+| 1. Errors -> error_reporting() 
+|			-> It will report what errors are occured and report everything except E_NOTICE and E_STRICT
+|
+| 2. Display Errors ->  display_errors() 
+|					-> It will display All Errors to User that are caught by error_reporting() function.
+*/
 
 error_reporting(E_ALL|E_STRICT|E_DEPRECATED);
 ini_set('display_errors', 1);
