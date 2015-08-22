@@ -1,0 +1,13 @@
+php_value error_reporting 32767
+php_value log_errors_max_len 0
+php_flag display_startup_errors On
+php_flag display_errors On
+php_flag html_errors On
+php_flag log_errors On
+php_flag ignore_repeated_errors On
+php_flag ignore_repeated_source On
+php_flag report_memleaks On
+php_flag track_errors On
+php_value docref_root "/phpmanual/"
+php_value docref_ext .html
+php_value error_log "C:\xampp\php\logs\php_error_log"
