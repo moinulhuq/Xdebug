@@ -21,8 +21,9 @@ function checkNum($number) { //create function with an exception
 
 checkNum(2); //trigger exception
 
-/* Fatal error: Uncaught exception 'Exception' with message 'Value must be 1 or below' in    C:\xampp\htdocs\prac\index.php:17 
-   Stack trace: #0 C:\xampp\htdocs\prac\index.php(24): checkNum(2) #1 {main} thrown in C:\xampp\htdocs\prac\index.php on line 17
+/* 
+Fatal error: Uncaught exception 'Exception' with message 'Value must be 1 or below' in    C:\xampp\htdocs\prac\index.php:17 
+Stack trace: #0 C:\xampp\htdocs\prac\index.php(24): checkNum(2) #1 {main} thrown in C:\xampp\htdocs\prac\index.php on line 17
 */
 
 ?>
