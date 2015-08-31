@@ -69,6 +69,27 @@
 |	Step Into: CTRL+SHIFT+F7
 |	Step Out: CTRL+SHIFT+F8
 |
+| 9. To use Visual Studio-like keys, add the following Key Bindings configuration 
+|    (Preferences > Key Bindings – User, before the ending bracket)
+|
+| {"keys": ["f9"], "command": "xdebug_breakpoint"}, 
+| {"keys": ["ctrl+alt+f8"], "command": "xdebug_conditional_breakpoint"},
+| {"keys": ["f5"], "command": "xdebug_continue", "args": {"command": "run"}},
+| {"keys": ["f10"], "command": "xdebug_continue", "args": {"command": "step_over"}},
+| {"keys": ["f11"], "command": "xdebug_continue", "args": {"command": "step_into"}},
+| {"keys": ["shift+f11"], "command": "xdebug_continue", "args": {"command": "step_out"}},
+| {"keys": ["shift+f5"], "command": "xdebug_session_stop"},
+| {"keys": ["alt+f5"], "command": "xdebug_session_start"},
+| {"keys": ["ctrl+alt+l"], "command": "xdebug_layout", "args": {"keymap" : true}}   
+|
+| Start: ALT+F9
+| Stop: SHIFT+F9
+| Add Breakpoint: F8
+| Run: F5
+| Step Over: F10
+| Step Into: F11
+| Step Out: SHIFT+F11
+|
 */	
 
 $x=10;
