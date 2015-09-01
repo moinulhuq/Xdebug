@@ -28,5 +28,13 @@ notifydriver("Moin", 15); // Add Break point here and then strat debugging(xdebu
 // Now if you press "Step into" then it will goto function notifydriver() definition 
 // but if you press "Step over" or "Step out" it will goto next line
 
+/*
+|--------------------------------------------------------------------------
+| watch exression
+|--------------------------------------------------------------------------
+| 1. You also can add watch exression to watch the particular variable value. To set it right click on editor
+| 2. Then select set watch expression then type any varible name used in you code i.e "$age" or "$msg" simply type 
+| 3. these var name then you can see the value of that var.
+*/
 
 ?>
