@@ -65,4 +65,11 @@ function slower(){
 |   
 */
 
+/*
+|--------------------------------------------------------------------------
+| Note
+|--------------------------------------------------------------------------
+| If any function invoked a lot and their 'sefl cost == inclusive cost' then this function is good candidate 
+| for optimization.
+*/
 ?>
