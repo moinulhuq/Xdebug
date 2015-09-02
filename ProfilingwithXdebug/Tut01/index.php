@@ -42,27 +42,3 @@ function slower(){
 
 ?>
 
-/*
-|--------------------------------------------------------------------------
-| Output page description
-|--------------------------------------------------------------------------
-| The basic output lists all the different functions, methods, and included/required files
-| -> Invocation Count: The number of times the function has been called
-| -> Total Self Cost: The total time it took to execute the raw php in this function 
-|    (time taken to execute your other custom functions is excluded.)
-| -> Total Inclusive Cost: Total time, including any other functions called (PHP internal, or your functions)
-| 
-| What the different colours mean?
-|   Blue are PHP internal functions
-|   Green are your class methods
-|   Orange are procedural functions
-|   Grey is time taken to include, or require .php files.
-|
-| What the coloured bar means? Graphical display of breakdown of time for each type as above.
-| 
-| For the last ones, I assume you've clicked the arrow to open a particular function?
-|   Calls: The functions/methods called in executing this function      
-|
-| Total Call Cost: The total time executing this function, when called from the parent function
-|   Count: Number of times the parent calls the child.
-*/
