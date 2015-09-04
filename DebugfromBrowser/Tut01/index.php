@@ -16,32 +16,41 @@
 | -> Check in your console window for output
 */
 
-require_once "FirePHPCore/FirePHP.class.php";
+require_once "FirePHPCore/fb.php";
 ob_start();
 
-$FirePHP = FirePHP::getInstance(TRUE); // It is an singleton instance
+
+//$FirePHP = FirePHP::getInstance(TRUE); // if you use require_once "FirePHPCore/FirePHP.class.php";
 
 // To Enable or Disable FirePHP
-$FirePHP->setEnabled(TRUE); // by deault it is enable do not need to write
-$FirePHP->setEnabled(FALSE); // but if you want to disable it then write
+FB::setEnabled(FALSE); // but if you want to disable it then write
+FB::setEnabled(TRUE); // by deault it is enable do not need to write
+
 
 // For Printing the string or any kind of msg
-$FirePHP->log("Simple String print"); 
-$FirePHP->log("Simple String print", "Info"); 
+FB::log("Simple String print"); 
+FB::log("Simple String print", "Info"); 
+
 
 // For Printing the simple value
 $val = 20;
-$FirePHP->log($val); 
+FB::log($val); 
+
 
 // For Printing array
 $arr = array("a"=>1, "b"=>2, "c"=>"cat");
-$FirePHP->log($arr); 
-$FirePHP->log($arr, "value of arr"); 
+
+FB::log($arr); 
+FB::log($arr, "value of arr"); 
+
+FB::send($arr, FirePHP::WARN); // FirePHP::INFO, FirePHP::ERROR
+FB::send($arr, 'An array with an Error type', FirePHP::ERROR);
 
 //FirePHP support three custom error level
-$FirePHP->info("Triggered Notice");
-$FirePHP->warn("Triggered Warning");
-$FirePHP->error("Triggered Error");
+FB::info("Triggered Notice");
+FB::warn("Triggered Warning");
+FB::error("Triggered Error");
+
 
 //FirePHP support Stack trace
 function a($param){
@@ -51,10 +60,11 @@ function b($param){
     c('delta'); 
 }
 function c($param){    
-    $FirePHP = FirePHP::getInstance(TRUE);
-    $FirePHP->trace("Tracing");    
+    
+    FB::trace("Tracing");    
 }
 a('alpha');
+
 
 //FirePHP could use as PHP Profiling Tool
 $requestStart = microtime();
@@ -62,7 +72,36 @@ a('alpha');
 $requestEnd = microtime(); 
   
 $executionTime = $requestEnd - $requestStart; 
-$FirePHP->info($executionTime, 'This request took (seconds)'); 
+FB::info($executionTime, 'This request took (seconds)'); 
+
+//FirePHP support grouping msg
+$arr = array("a"=>1, "b"=>2, "c"=>"cat", "d"=>"dog");
+
+FB::group('Grouping Integer');
+foreach($arr as $a){
+    if(intval($a)!=0)
+        FB::log($a);
+}
+FB::groupEnd();
+
+
+//FirePHP support Table display
+$specialHashes = array();
+for ($x = 0; $x < 5; $x++) {
+    $specialHashes[] = array($x, sha1($x . 'somesalt'));
+}
+
+$headers = array('Hash #', 'Hash Value');
+$logTable = array($headers) + $specialHashes;
+FB::table("Special Hashes", $logTable)
+
+
+/*
+|--------------------------------------------------------------------------
+| For HELP - FIREPHP Documentation
+|--------------------------------------------------------------------------
+| https://github.com/firephp/firephp/blob/master/docs/API/FirePHP.md
+*/
 
 
 ?>
