@@ -36,7 +36,7 @@ function d($arg) {
 
 a('alpha');
 
-//FirePHP could use as PHP Profiling Tool
+//PHP_Debug could use as PHP Profiling Tool
 $debug_line = $PHP_Debug->add("Profiling with PHP_Debug"); 
 $debug_line->setStartTime();
 a('alpha');
